@@ -6,7 +6,7 @@ public class NormalUser extends User {
 
 	NormalUser(String[] userDetails) {
 		super(userDetails);
-		this.role = "super_user";
+		this.role = "normal_user";
 	}
 
 	public String getRole() {

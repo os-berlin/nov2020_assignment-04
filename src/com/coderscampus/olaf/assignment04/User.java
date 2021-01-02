@@ -14,7 +14,7 @@ public class User implements Comparable<User> {
 		this.role = userDetails[3];
 	}
 	
-	/* I've tried to avoid to assign userDetails[3] to 
+	/* I've tried to avoid assigning userDetails[3] to 
 	 * this.role to in here (because it should only be
 	 * assigned within the child classes I think)
 	 * but if I try something like a String "not yet
