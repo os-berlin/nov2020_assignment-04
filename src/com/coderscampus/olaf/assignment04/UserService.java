@@ -42,9 +42,7 @@ public class UserService {
 
 	public void userMenu(User currentUser) throws IOException {
 
-		Integer inputMenuItem = 0;
-
-		while (inputMenuItem != 4) {
+		while (true) {
 			boolean superUserPermission = false;
 
 			System.out.println("\nWelcome: " + currentUser.getName());
@@ -58,7 +56,7 @@ public class UserService {
 			System.out.println("(1) Update username\n" + "\n" + "(2) Update password\n" + "\n" + "(3) Update name\n"
 					+ "\n" + "(4) Exit" + "\n");
 
-			inputMenuItem = Integer.parseInt(scanner.nextLine());
+			Integer inputMenuItem = Integer.parseInt(scanner.nextLine());
 
 			if (inputMenuItem.equals(0) && superUserPermission == true) {
 				currentUser = switchUser();
@@ -72,9 +70,10 @@ public class UserService {
 				System.out.println("\n" + "Please type in your new name:" + "\n");
 				currentUser = updateUserDetails(currentUser, "name", scanner.nextLine());
 			} else if (inputMenuItem.equals(4)) {
-				System.out.println("\n" + "Bye bye!");
+				System.out.println("\n" + "..exiting. Bye bye!");
+				System.exit(0);
 			} else {
-				System.out.println("\n" + "Invalid input or super_user role required" + "\n" + "...terminating");
+				System.out.println("\n" + "Invalid input or super_user role required" + "\n" + "..exiting");
 				System.exit(0);
 			}
 		}
