@@ -11,9 +11,16 @@ public class User implements Comparable<User> {
 		this.username = userDetails[0];
 		this.password = userDetails[1];
 		this.name = userDetails[2];
-		this.role = "not yet assigned";
+		this.role = userDetails[3];
 	}
 	
+	/* I've tried to avoid to assign userDetails[3] to 
+	 * this.role to in here (because it should only be
+	 * assigned within the child classes I think)
+	 * but if I try something like a String "not yet
+	 * assigned", the CompareTo method breaks.. 
+	 * not sure why, since this.role will be assigned
+	 * in the SuperUser or NormalUser constructor*/	
 
 	@Override
 	public int compareTo(User that) {
