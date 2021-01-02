@@ -64,7 +64,7 @@ public class UserService {
 				currentUser = switchUser();
 			} else if (inputMenuItem.equals(1)) {
 				System.out.println("\n" + "Please type in your new username:" + "\n");
-				currentUser = updateUserDetails(currentUser, "username", scanner.nextLine());			
+				currentUser = updateUserDetails(currentUser, "username", scanner.nextLine());
 			} else if (inputMenuItem.equals(2)) {
 				System.out.println("\n" + "Please type in your new password:" + "\n");
 				currentUser = updateUserDetails(currentUser, "password", scanner.nextLine());
