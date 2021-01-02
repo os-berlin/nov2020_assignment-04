@@ -5,13 +5,15 @@ public class User implements Comparable<User> {
 	private String username;
 	private String password;
 	private String name;
-	private String role = "no role assigned, yet";
+	private String role;
 
 	public User(String[] userDetails) {
 		this.username = userDetails[0];
 		this.password = userDetails[1];
 		this.name = userDetails[2];
+		this.role = userDetails[3];
 	}
+	
 
 	@Override
 	public int compareTo(User that) {
